@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://eservices.ci.richmond.va.us/services/publicsafety/traffic/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://eservices.ci.richmond.va.us/services/publicsafety/traffic/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides Traffic Incident Information for the City of Richmond (Richmond, VA)</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://eservices.ci.richmond.va.us/services/publicsafety/traffic/">
+      <s:element name="getCORNorth">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCORNorthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCORNorthResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCORSouth">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCORSouthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCORSouthResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCORAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCORAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCORAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getCORNorthSoapIn">
+    <wsdl:part name="parameters" element="tns:getCORNorth" />
+  </wsdl:message>
+  <wsdl:message name="getCORNorthSoapOut">
+    <wsdl:part name="parameters" element="tns:getCORNorthResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCORSouthSoapIn">
+    <wsdl:part name="parameters" element="tns:getCORSouth" />
+  </wsdl:message>
+  <wsdl:message name="getCORSouthSoapOut">
+    <wsdl:part name="parameters" element="tns:getCORSouthResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCORAllSoapIn">
+    <wsdl:part name="parameters" element="tns:getCORAll" />
+  </wsdl:message>
+  <wsdl:message name="getCORAllSoapOut">
+    <wsdl:part name="parameters" element="tns:getCORAllResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NewCORTrafficSoap">
+    <wsdl:operation name="getCORNorth">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This Web Method gets the City of Richmond's traffic incidents that include latitude and longitude for locations North of the James river.&lt;BR&gt;This operation requires no parameters and returns a dataset.</wsdl:documentation>
+      <wsdl:input message="tns:getCORNorthSoapIn" />
+      <wsdl:output message="tns:getCORNorthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCORSouth">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This Web Method gets the City of Richmond's traffic incidents that include latitude and longitude for locations South of the James river.&lt;BR&gt;This operation requires no parameters and returns a dataset.</wsdl:documentation>
+      <wsdl:input message="tns:getCORSouthSoapIn" />
+      <wsdl:output message="tns:getCORSouthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCORAll">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This Web Method gets the City of Richmond's traffic incidents that include latitude and longitude from all around the city.&lt;BR&gt;This operation requires no parameters and return a dataset.</wsdl:documentation>
+      <wsdl:input message="tns:getCORAllSoapIn" />
+      <wsdl:output message="tns:getCORAllSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NewCORTrafficSoap" type="tns:NewCORTrafficSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCORNorth">
+      <soap:operation soapAction="http://eservices.ci.richmond.va.us/services/publicsafety/traffic/getCORNorth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCORSouth">
+      <soap:operation soapAction="http://eservices.ci.richmond.va.us/services/publicsafety/traffic/getCORSouth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCORAll">
+      <soap:operation soapAction="http://eservices.ci.richmond.va.us/services/publicsafety/traffic/getCORAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NewCORTrafficSoap12" type="tns:NewCORTrafficSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCORNorth">
+      <soap12:operation soapAction="http://eservices.ci.richmond.va.us/services/publicsafety/traffic/getCORNorth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCORSouth">
+      <soap12:operation soapAction="http://eservices.ci.richmond.va.us/services/publicsafety/traffic/getCORSouth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCORAll">
+      <soap12:operation soapAction="http://eservices.ci.richmond.va.us/services/publicsafety/traffic/getCORAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NewCORTraffic">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides Traffic Incident Information for the City of Richmond (Richmond, VA)</wsdl:documentation>
+    <wsdl:port name="NewCORTrafficSoap" binding="tns:NewCORTrafficSoap">
+      <soap:address location="http://eservices.ci.richmond.va.us/services/PublicSafety/Traffic/newcortraffic.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NewCORTrafficSoap12" binding="tns:NewCORTrafficSoap12">
+      <soap12:address location="http://eservices.ci.richmond.va.us/services/PublicSafety/Traffic/newcortraffic.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

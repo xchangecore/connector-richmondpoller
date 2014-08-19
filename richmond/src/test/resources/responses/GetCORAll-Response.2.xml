@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+		<getCORAllResponse xmlns="http://eservices.ci.richmond.va.us/services/publicsafety/traffic/">
+			<getCORAllResult>
+				<xs:schema id="TrafficPage" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+					<xs:element name="TrafficPage" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+						<xs:complexType>
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="Incident">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="Location" type="xs:string" minOccurs="0"/>
+											<xs:element name="Status" type="xs:string" minOccurs="0"/>
+											<xs:element name="Remarks" type="xs:string" minOccurs="0"/>
+											<xs:element name="Type" type="xs:string" minOccurs="0"/>
+											<xs:element name="Direction" type="xs:string" minOccurs="0"/>
+											<xs:element name="Lat" type="xs:string" minOccurs="0"/>
+											<xs:element name="Lon" type="xs:string" minOccurs="0"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+				</xs:schema>
+				<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+					<TrafficPage xmlns="">
+						<Incident diffgr:id="Incident1" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+							<Location>3116 Q ST RICH / CrossStreet: N 31ST ST</Location>
+							<Status>On Scene 1:56 PM</Status>
+							<Remarks>COMP STATED THE HOUSE WAS ON FIRE AND HER GRANDMA IS STILL INSIDE...THE GRANDMA IS WHEELCHAIR BOUND, GRANDMA SAFE</Remarks>
+							<Type>FIRE, HOUSE / STRUCTURE </Type>
+							<Direction>NORTH</Direction>
+							<Lat>37.534813</Lat>
+							<Lon>-77.406029</Lon>
+						</Incident>
+						<Incident diffgr:id="Incident2" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+							<Location>1207 W 47TH ST RICH / CrossStreet: DUNSTON AVE</Location>
+							<Status>On Scene 2:45 PM</Status>
+							<Remarks>COMPL'S 2001 LEXUS WAS STRUCK WHILE PARKED--NO DESCRIPTION/INFO ON STRIKING VEH</Remarks>
+							<Type>HIT &amp; RUN ACCIDENT, INVESTIGATE</Type>
+							<Direction>SOUTH</Direction>
+							<Lat>37.519306</Lat>
+							<Lon>-77.485996</Lon>
+						</Incident>
+						<Incident diffgr:id="Incident3" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+							<Location>W GRACE ST/N HARRISON ST</Location>
+							<Status>On Scene 2:57 PM</Status>
+							<Remarks>C/B FEM TRIPPED ON A RAISED SIDEWALK...ATF/NUA...COMPL ADVISED THAT HE DIDNT WANT THE POLICE HE WANTED EMS..</Remarks>
+							<Type>ACCIDENT -CITY PROPERTY, INVESTIGATE</Type>
+							<Direction>NORTH</Direction>
+							<Lat>37.550982</Lat>
+							<Lon>-77.453120</Lon>
+						</Incident>
+						<Incident diffgr:id="Incident4" msdata:rowOrder="3" diffgr:hasChanges="inserted">
+							<Location>1704 HANOVER AVE RICH / CrossStreet: N ALLEN AVE</Location>
+							<Status>On Scene 12:58 PM</Status>
+							<Remarks>BEARD RESD/2ND FLOOR SMOKE...NO KEYHOLDER RESPONDING</Remarks>
+							<Type>FIRE, ALARM, SMOKE/HEAT/DUCT</Type>
+							<Direction>NORTH</Direction>
+							<Lat>37.551497</Lat>
+							<Lon>-77.460472</Lon>
+						</Incident>
+						<Incident diffgr:id="Incident5" msdata:rowOrder="4" diffgr:hasChanges="inserted">
+							<Location>4400 W BROAD ST RICH / CrossStreet: COMMONWEALTH AVE</Location>
+							<Status>Dispatched 12:05 AM</Status>
+							<Remarks>OCCURED EARLIER--COMPL IS AT T CALL AUTO SALES--SAYS OTHER DRIVER WILL RETURN AS</Remarks>
+							<Type>ACCIDENT, INVESTIGATE</Type>
+							<Direction>NORTH</Direction>
+							<Lat>37.576417</Lat>
+							<Lon>-77.486598</Lon>
+						</Incident>
+					</TrafficPage>
+				</diffgr:diffgram>
+			</getCORAllResult>
+		</getCORAllResponse>
